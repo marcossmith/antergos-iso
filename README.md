@@ -26,6 +26,12 @@ Please, check that you have 5GB (or more) of free harddisk space in your root pa
 ```
 sudo pacman -S arch-install-scripts cpio dosfstools gfxboot libisoburn mkinitcpio-nfs-utils make patch squashfs-tools wget
 ```
+```
+cpio; https://www.archlinux.org/packages/extra/x86_64/cpio/download/
+mkinitcpio-nfs-utils; https://www.archlinux.org/packages/core/x86_64/mkinitcpio-nfs-utils/download/
+nasm; https://www.archlinux.org/packages/extra/x86_64/nasm/download/
+```
+
 2. Clone this repository using `--recursive` like this:
 ```
 git clone https://github.com/antergos/antergos-iso.git --recursive
@@ -57,6 +63,18 @@ The `/work` folder will store the livecd filesystem while the `/out` folder will
 
 7. Go to the `config` directory you wish to build from.
 - The "official" iso is in the `antergos` folder.
+```
+More Information https://github.com/Antergos/antergos-gfxboot.git
+```
+```
+cd /home/user/antergos-iso/configs/antergos/antergos-gfxboot
+make
+```
+```
+Folder isolinux it is necessary, if not; /home/user/antergos-iso/configs/antergos/isolinux/*.cfg Not Found
+cp /home/user/antergos-iso/configs/antergos/antergos-gfxboot/isolinux /home/user/antergos-iso/configs/antergos/isolinux
+```
+
 ```
 cd /home/user/antergos-iso/configs/antergos
 ```
